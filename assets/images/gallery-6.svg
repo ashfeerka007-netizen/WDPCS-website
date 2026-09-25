@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2442"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g6)"/>
+  <!-- Community Activity Motif -->
+  <circle cx="230" cy="150" r="32" fill="#60a5fa" opacity="0.8"/>
+  <circle cx="300" cy="130" r="36" fill="#dfa233" opacity="0.9"/>
+  <circle cx="370" cy="150" r="32" fill="#4ade80" opacity="0.8"/>
+  <path d="M190,220 C190,190 270,190 270,220 Z" fill="#93c5fd"/>
+  <path d="M260,210 C260,180 340,180 340,210 Z" fill="#fde047"/>
+  <path d="M330,220 C330,190 410,190 410,220 Z" fill="#86efac"/>
+  
+  <rect x="80" y="270" width="440" height="80" rx="8" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="300" y="300" font-family="'Outfit', sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">Police Fraternity Welfare Activities</text>
+  <text x="300" y="325" font-family="Arial, sans-serif" font-size="12" fill="#93c5fd" text-anchor="middle">[Official Society Photograph Placeholder]</text>
+</svg>

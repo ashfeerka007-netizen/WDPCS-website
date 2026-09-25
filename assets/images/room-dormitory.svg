@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="dormGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e3d25"/>
+      <stop offset="100%" stop-color="#0a192f"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#dormGrad)"/>
+  
+  <rect x="40" y="40" width="520" height="320" rx="12" fill="#134e4a" opacity="0.35" stroke="#2dd4bf" stroke-width="1.5"/>
+  
+  <!-- Bunk Bed Layout Rows -->
+  <!-- Bed 1 -->
+  <rect x="90" y="100" width="110" height="150" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="100" y="110" width="90" height="30" rx="3" fill="#ffffff" opacity="0.8"/>
+  <rect x="100" y="150" width="90" height="90" rx="3" fill="#0284c7" opacity="0.4"/>
+  <text x="145" y="195" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">Bed A</text>
+
+  <!-- Bed 2 -->
+  <rect x="245" y="100" width="110" height="150" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="255" y="110" width="90" height="30" rx="3" fill="#ffffff" opacity="0.8"/>
+  <rect x="255" y="150" width="90" height="90" rx="3" fill="#0284c7" opacity="0.4"/>
+  <text x="300" y="195" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">Bed B</text>
+
+  <!-- Bed 3 -->
+  <rect x="400" y="100" width="110" height="150" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="410" y="110" width="90" height="30" rx="3" fill="#ffffff" opacity="0.8"/>
+  <rect x="410" y="150" width="90" height="90" rx="3" fill="#0284c7" opacity="0.4"/>
+  <text x="455" y="195" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">Bed C</text>
+
+  <!-- Badge Overlay -->
+  <rect x="160" y="285" width="280" height="42" rx="8" fill="#0a192f" stroke="#2ea869" stroke-width="1.5"/>
+  <text x="300" y="312" font-family="'Outfit', sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Society Dormitory Facility</text>
+  
+  <text x="300" y="380" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Wayanad District Police Co-operative Society Ltd. No. W 208</text>
+</svg>

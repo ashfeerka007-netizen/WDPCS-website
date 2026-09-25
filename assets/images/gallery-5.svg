@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e3d25"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g5)"/>
+  <!-- Member Assistance Desk Motif -->
+  <rect x="160" y="160" width="280" height="80" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1.5"/>
+  <circle cx="220" cy="120" r="22" fill="#86efac"/>
+  <circle cx="380" cy="120" r="22" fill="#fde047"/>
+  <path d="M260,195 L340,195" stroke="#ffffff" stroke-width="3" stroke-dasharray="6 3"/>
+  
+  <rect x="80" y="270" width="440" height="80" rx="8" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="300" y="300" font-family="'Outfit', sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">Member Loan &amp; Financial Support Services</text>
+  <text x="300" y="325" font-family="Arial, sans-serif" font-size="12" fill="#86efac" text-anchor="middle">[Official Society Photograph Placeholder]</text>
+</svg>

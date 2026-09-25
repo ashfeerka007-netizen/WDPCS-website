@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2442"/>
+      <stop offset="100%" stop-color="#0a192f"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g4)"/>
+  <!-- Office Facade & Entrance -->
+  <rect x="180" y="80" width="240" height="170" rx="8" fill="#1e3a5f" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="260" y="150" width="80" height="100" fill="#0f172a" stroke="#dfa233" stroke-width="2"/>
+  <rect x="200" y="100" width="50" height="40" fill="#38bdf8" opacity="0.3"/>
+  <rect x="350" y="100" width="50" height="40" fill="#38bdf8" opacity="0.3"/>
+  
+  <rect x="80" y="270" width="440" height="80" rx="8" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="300" y="300" font-family="'Outfit', sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">Society Administrative Premises</text>
+  <text x="300" y="325" font-family="Arial, sans-serif" font-size="12" fill="#93c5fd" text-anchor="middle">[Official Society Photograph Placeholder]</text>
+</svg>
