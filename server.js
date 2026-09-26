@@ -11,6 +11,7 @@ const MIME_TYPES = {
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
   '.svg': 'image/svg+xml',
+  '.pdf': 'application/pdf',
   '.xml': 'application/xml',
   '.txt': 'text/plain'
 };
