@@ -20,6 +20,11 @@
   .hero-card {
     max-width: 480px;
     margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-photo-img {
+    height: 380px;
   }
 
   .quick-access-grid {
@@ -176,6 +181,10 @@
     width: 100%;
   }
 
+  .hero-photo-img {
+    height: 320px;
+  }
+
   .quick-access-grid {
     grid-template-columns: 1fr;
   }
@@ -184,7 +193,7 @@
     grid-template-columns: 1fr;
   }
 
-  .gallery-grid {
+  .gallery-grid, .gallery-grid-2col {
     grid-template-columns: 1fr;
   }
 

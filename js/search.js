@@ -20,13 +20,6 @@ const SITE_SEARCH_INDEX = [
     keywords: "about who we serve purpose governance managing committee background registration W 208"
   },
   {
-    title: "Mission, Vision & Core Values",
-    category: "Main Pages",
-    url: "mission-vision.html",
-    description: "Institutional vision, mission, and foundational values: Trust, Transparency, Co-operation, Service, Financial Responsibility, and Member Welfare.",
-    keywords: "mission vision values trust transparency cooperation service member welfare philosophy"
-  },
-  {
     title: "Services & Financial Products",
     category: "Main Pages",
     url: "services.html",

@@ -803,39 +803,47 @@ li {
   font-weight: 600;
 }
 
-/* Hero Right Side - Institutional Card with Society Building Photo */
+/* Hero Right Side - Institutional Showcase Card with Society Building Photo */
 .hero-card {
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  border-radius: var(--radius-xl);
-  padding: var(--space-6);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-3);
   text-align: center;
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
   position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.hero-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(223, 162, 51, 0.3);
 }
 
 .hero-photo-container {
   position: relative;
-  border-radius: var(--radius-lg);
+  border-radius: calc(var(--radius-2xl) - 6px);
   overflow: hidden;
-  margin: 0 auto var(--space-4);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  margin: 0;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
   background: #0b1528;
 }
 
 .hero-photo-img {
   width: 100%;
-  height: 220px;
+  height: 480px;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 20%;
   display: block;
-  transition: transform var(--transition-normal);
+  transition: transform 0.6s ease;
 }
 
 .hero-photo-container:hover .hero-photo-img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .hero-photo-caption {
@@ -843,20 +851,45 @@ li {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(10, 25, 47, 0.95) 0%, rgba(10, 25, 47, 0.7) 60%, transparent 100%);
-  padding: var(--space-3) var(--space-4) var(--space-2);
+  background: linear-gradient(to top, rgba(10, 25, 47, 0.96) 0%, rgba(10, 25, 47, 0.8) 55%, transparent 100%);
+  padding: var(--space-6) var(--space-5) var(--space-4);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   text-align: left;
+  gap: var(--space-2);
+}
+
+.hero-caption-main {
+  display: flex;
+  flex-direction: column;
 }
 
 .photo-title {
   font-family: var(--font-heading);
-  font-size: 0.885rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-white);
   letter-spacing: 0.01em;
+}
+
+.photo-sub {
+  font-size: 0.8rem;
+  color: #93c5fd;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.photo-badge {
+  font-size: 0.725rem;
+  color: #fef08a;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  background: rgba(223, 162, 51, 0.2);
+  border: 1px solid rgba(223, 162, 51, 0.4);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
 }
 
 .photo-location {

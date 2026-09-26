@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const filterPills = document.querySelectorAll('.gallery-filter-pill');
   const galleryItems = document.querySelectorAll('.gallery-item');
+  const albumSections = document.querySelectorAll('.gallery-album-section');
   const lightboxModal = document.getElementById('galleryLightbox');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxCaption = document.getElementById('lightboxCaption');
@@ -37,6 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
           item.style.display = 'none';
         }
       });
+
+      // Update album section visibility
+      albumSections.forEach(section => {
+        const sectionItems = section.querySelectorAll('.gallery-item');
+        const hasVisible = Array.from(sectionItems).some(item => item.style.display !== 'none');
+        section.style.display = hasVisible ? 'block' : 'none';
+      });
+
       updateActiveList();
     });
   });

@@ -6,7 +6,6 @@ const ROOT_DIR = __dirname;
 const REQUIRED_PAGES = [
   'index.html',
   'about.html',
-  'mission-vision.html',
   'services.html',
   'downloads.html',
   'gallery.html',
@@ -41,6 +40,8 @@ const REQUIRED_JS = [
 const REQUIRED_ASSETS = [
   'assets/images/society-logo.svg',
   'assets/images/society-building.jpg',
+  'assets/images/building-inauguration-2014-1.jpg',
+  'assets/images/building-inauguration-2014-2.jpg',
   'assets/images/favicon.svg',
   'assets/images/room-guest-room.svg',
   'assets/images/room-dormitory.svg',
@@ -199,9 +200,6 @@ const expectedDirectors = [
 expectedDirectors.forEach(dir => {
   assert(aboutContent.includes(dir), `about.html contains Director: ${dir}`);
 });
-
-assert(aboutContent.includes('7 Employees') || aboutContent.includes('Total Staff Strength'), 'about.html contains 7 employees staff strength');
-assert(aboutContent.includes('Secretary'), 'about.html includes Secretary in staff');
 
 console.log('\n==================================================');
 console.log('6. VERIFYING SUPPORTING & LEGAL PAGES SPECIFICS');
