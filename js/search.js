@@ -54,14 +54,21 @@ const SITE_SEARCH_INDEX = [
     description: "Official address at Kalpetta North, telephone 04936 205940, mobile 8301995940 (WhatsApp), email wdpcs.208@gmail.com, working hours 10:00 AM to 5:00 PM, and direct enquiry submission.",
     keywords: "contact enquiry address telephone phone 04936205940 mobile 8301995940 whatsapp email wdpcs.208@gmail.com kalpetta north wayanad 673122 helpdesk office hours timings"
   },
+  {
+    title: "Official Bank Account & UPI Payment Details",
+    category: "Banking & Payments",
+    url: "contact.html",
+    description: "Official society account details for sending money via UPI (wynddpc@sbi) and direct bank transfer via SBI (Kainatty Branch, A/C: 33175259937, IFSC: SBIN0003035) or Kerala Bank (Kalpetta Main, A/C: 171412002000112, IFSC: KSBK0001714).",
+    keywords: "bank account upi send money payment transfer neft rtgs imps sbi sbin0003035 33175259937 kerala bank ksbk0001714 171412002000112 wynddpc@sbi phonepe google pay gpay paytm bhim cred"
+  },
 
   // Deposit Products
   {
     title: "Savings Deposit Scheme",
     category: "Deposits",
     url: "services.html#deposits",
-    description: "Flexible savings deposit scheme facilitating liquid thrift and daily transaction needs for police personnel.",
-    keywords: "savings deposit thrift account liquidity interest passbook"
+    description: "Flexible savings deposit scheme facilitating liquid thrift, daily minimum balance interest credit, and convenient counter facilities.",
+    keywords: "savings deposit thrift account liquidity interest passbook balance withdrawal"
   },
   {
     title: "Recurring Deposit Scheme (RD)",
@@ -74,22 +81,22 @@ const SITE_SEARCH_INDEX = [
     title: "Fixed Deposit Scheme (FD)",
     category: "Deposits",
     url: "services.html#deposits",
-    description: "Guaranteed term investment offering security and competitive yield for member funds with loan-against-deposit facility.",
-    keywords: "fixed deposit fd term deposit guaranteed interest investment tenure"
+    description: "Guaranteed term investment offering security and competitive yield with flexible tenure options and deposit loan facility.",
+    keywords: "fixed deposit fd term deposit guaranteed interest investment tenure deposit loan"
   },
   {
-    title: "Monthly Savings Scheme",
+    title: "Monthly Savings Scheme (MSS)",
     category: "Deposits",
     url: "services.html#deposits",
-    description: "Structured monthly thrift plan formulated around police department salary schedules with completion incentives.",
-    keywords: "monthly savings scheme instalment bonus thrift police salary"
+    description: "Structured monthly thrift plan formulated around police department salary schedules with completion benefits.",
+    keywords: "monthly savings scheme mss instalment bonus thrift police salary advance"
   },
   {
-    title: "Group Deposit Scheme",
+    title: "Group Deposit Scheme (GDS)",
     category: "Deposits",
     url: "services.html#deposits",
-    description: "Collective co-operative deposit mechanism facilitating mutual thrift among member groups in Wayanad.",
-    keywords: "group deposit scheme collective mutual co-operative savings pool"
+    description: "Collective co-operative deposit mechanism facilitating mutual thrift and monthly credit access among member personnel.",
+    keywords: "group deposit scheme gds collective mutual co-operative savings pool lottery draw advance discount"
   },
 
   // Member Loan Products
@@ -97,36 +104,36 @@ const SITE_SEARCH_INDEX = [
     title: "Emergency Loan",
     category: "Loans",
     url: "services.html#loans",
-    description: "Expedited financial credit facility to provide urgent assistance to members facing unexpected personal or medical emergencies.",
-    keywords: "emergency loan medical urgent immediate cash advance credit"
+    description: "Expedited credit facility up to ₹1,00,000.00 at 10% interest for 12 months (Non-EMI) for urgent personal or medical contingencies.",
+    keywords: "emergency loan 100000 1 lakh 10% 12 months non-emi medical urgent immediate cash advance credit"
   },
   {
     title: "Hire Purchase Loan",
     category: "Loans",
     url: "services.html#loans",
-    description: "Asset acquisition credit enabling members to purchase household appliances, consumer electronics, and two-wheelers with monthly instalments.",
-    keywords: "hire purchase loan hp durable appliance electronics computer vehicle two wheeler"
+    description: "Asset purchase loan up to ₹2,00,000.00 at 10% interest for up to 48 months (Non-EMI) for household appliances, consumer electronics, and vehicles.",
+    keywords: "hire purchase loan hp 200000 2 lakhs 10% 48 months non-emi durable appliance electronics computer vehicle two wheeler"
   },
   {
     title: "Medium Term Loan",
     category: "Loans",
     url: "services.html#loans",
-    description: "Flexible mid-range credit product providing higher borrowing limits for home improvement, education, and domestic commitments.",
-    keywords: "medium term loan mtl personal borrowing renovation education finance"
+    description: "High-limit credit facility up to ₹20,00,000.00 at 10% interest for up to 120 months (EMI) for home renovation, education, and domestic commitments.",
+    keywords: "medium term loan mtl 2000000 20 lakhs 10% 120 months emi personal borrowing renovation education finance"
   },
   {
     title: "Festival Loan",
     category: "Loans",
     url: "services.html#loans",
-    description: "Seasonal advance disbursed ahead of major state festivals (Onam, Vishu, Bakrid, Christmas) to support festive expenditures.",
-    keywords: "festival loan seasonal advance onam vishu bakrid christmas celebration"
+    description: "Seasonal advance up to ₹20,000.00 at 9% interest for 5 months (Non-EMI) ahead of major state festivals (Onam, Vishu, Bakrid, Christmas).",
+    keywords: "festival loan 20000 9% 5 months non-emi seasonal advance onam vishu bakrid christmas celebration"
   },
   {
     title: "Deposit Loan",
     category: "Loans",
     url: "services.html#loans",
-    description: "Immediate borrowing facility against existing Fixed or Recurring Deposits without premature account liquidation.",
-    keywords: "deposit loan loan against fd rd lien pledge collateral instant advance"
+    description: "Immediate credit facility up to 90% against existing Fixed or Recurring Deposits without premature liquidation.",
+    keywords: "deposit loan loan against fd rd lien pledge collateral instant advance 90%"
   },
 
   // Application Forms

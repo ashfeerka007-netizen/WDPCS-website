@@ -137,6 +137,52 @@ expectedLoans.forEach(loan => {
   assert(servicesContent.includes(loan), `services.html contains loan product: "${loan}"`);
 });
 
+// Loan Details Verification
+assert(servicesContent.includes('100,000.00') || servicesContent.includes('1,00,000.00'), 'services.html has Emergency Loan max amount 100000.00');
+assert(servicesContent.includes('200,000.00') || servicesContent.includes('2,00,000.00'), 'services.html has Hire Purchase Loan max amount 200000.00');
+assert(servicesContent.includes('20,00,000.00') || servicesContent.includes('2000000.00'), 'services.html has Medium Term Loan max amount 2000000.00');
+assert(servicesContent.includes('20,000.00'), 'services.html has Festival Loan max amount 20000.00');
+assert(servicesContent.includes('Non-EMI'), 'services.html specifies Non-EMI repayment mode');
+assert(servicesContent.includes('120 Months'), 'services.html specifies Medium Term Loan 120 Months tenure');
+
+// Fixed Deposit Scheme Verification
+assert(servicesContent.includes('Fixed Deposit'), 'services.html contains Fixed Deposit scheme');
+assert(servicesContent.includes('500.00') || servicesContent.includes('500'), 'services.html specifies FD min deposit 500');
+assert(servicesContent.includes('15 Days') || servicesContent.includes('15 days') || servicesContent.includes('15 ദിവസം'), 'services.html specifies FD min tenure 15 days');
+assert(servicesContent.includes('25,000') || servicesContent.includes('25000'), 'services.html specifies FD periodic payout min deposit 25,000');
+assert(servicesContent.includes('80% to 90%'), 'services.html specifies FD deposit loan 80% to 90%');
+
+// Recurring Deposit Scheme Verification
+assert(servicesContent.includes('Recurring Deposit'), 'services.html contains Recurring Deposit section');
+assert(servicesContent.includes('100.00'), 'services.html specifies RD min monthly deposit ₹100.00');
+assert(servicesContent.includes('12 Months to 120 Months'), 'services.html specifies RD tenure 12 Months to 120 Months');
+assert(servicesContent.includes('75%') && servicesContent.includes('RD Rate + up to 2%'), 'services.html specifies RD deposit loan up to 75% at RD rate + 2%');
+assert(servicesContent.includes('SB rate'), 'services.html specifies RD premature closure at SB rate');
+
+// Savings Account Scheme Verification
+assert(servicesContent.includes('Savings Deposit'), 'services.html contains Savings Deposit section');
+assert(servicesContent.includes('Daily Balance Basis') || servicesContent.includes('Daily Balance'), 'services.html specifies Daily Balance interest calculation');
+assert(servicesContent.includes('September') && servicesContent.includes('March'), 'services.html specifies bi-annual interest credit in September and March');
+assert(servicesContent.includes('4 withdrawals per week') || servicesContent.includes('4 withdrawals'), 'services.html specifies 4 withdrawals per week limit');
+assert(servicesContent.includes('10.00 per year') || servicesContent.includes('10/Yr') || servicesContent.includes('10 രൂപ'), 'services.html specifies 10 per year maintenance fee');
+
+// Monthly Savings Scheme (MSS) Verification
+assert(servicesContent.includes('Monthly Savings Scheme'), 'services.html contains Monthly Savings Scheme section');
+assert(servicesContent.includes('20 to 100'), 'services.html specifies MSS group size 20 to 100 members/months');
+assert(servicesContent.includes('10% of tickets or 5 tickets') || servicesContent.includes('10% of total group tickets or 5 tickets'), 'services.html specifies MSS ticket ceiling (10% or 5 tickets)');
+assert(servicesContent.includes('90%'), 'services.html specifies MSS advance facility up to 90%');
+assert(servicesContent.includes('5% Society Commission') || servicesContent.includes('5% commission'), 'services.html specifies MSS 5% society commission deduction');
+assert(servicesContent.includes('40 Groups') || servicesContent.includes('40 groups'), 'services.html specifies MSS 40 groups limit');
+assert(servicesContent.includes('4 Crores') || servicesContent.includes('4.00 Crores') || servicesContent.includes('4 കോടി'), 'services.html specifies MSS 4 Crores portfolio ceiling');
+
+// Group Deposit Scheme (GDS) Verification
+assert(servicesContent.includes('Group Deposit Scheme'), 'services.html contains Group Deposit Scheme section');
+assert(servicesContent.includes('25 to 100'), 'services.html specifies GDS group size 25 to 100 members');
+assert(servicesContent.includes('70% to 95%'), 'services.html specifies GDS monthly advance 70% to 95%');
+assert(servicesContent.includes('2nd Saturday') || servicesContent.includes('second Saturday'), 'services.html specifies GDS 2nd Saturday draw');
+assert(servicesContent.includes('11:00 AM') || servicesContent.includes('11 AM'), 'services.html specifies GDS draw time 11:00 AM');
+assert(servicesContent.includes('Dividend Sharing') || servicesContent.includes('Dividend sharing'), 'services.html specifies GDS dividend sharing');
+
 console.log('\n==================================================');
 console.log('4. VERIFYING DOWNLOADS FORMS (downloads.html)');
 console.log('==================================================');
@@ -152,6 +198,8 @@ const expectedForms = [
   'Savings Deposit Application',
   'Recurring Deposit Application',
   'Fixed Deposit Application',
+  'Monthly Savings Scheme (MSS) Application',
+  'Group Deposit Scheme (GDS) Application',
   'Education Award for Children',
   'Application for Loan Statement',
   'Application for Other Certifications'
@@ -327,6 +375,14 @@ assert(faqHtml.includes('10:00 AM') && faqHtml.includes('5:00 PM'), 'faq.html co
 
 const noticesHtml = fs.readFileSync(path.join(ROOT_DIR, 'notices.html'), 'utf-8');
 assert(noticesHtml.includes('10:00 AM') && noticesHtml.includes('5:00 PM'), 'notices.html contains official working hours in Notice 3');
+
+// Bank Account & UPI Details Verification (Strictly No QR Code as required)
+assert(contactHtml.includes('wynddpc@sbi'), 'contact.html contains UPI ID wynddpc@sbi');
+assert(contactHtml.includes('33175259937') && contactHtml.includes('SBIN0003035'), 'contact.html contains SBI Kainatty Account & IFSC');
+assert(contactHtml.includes('171412002000112') && contactHtml.includes('KSBK0001714'), 'contact.html contains Kerala Bank Kalpetta Account & IFSC');
+assert(!contactHtml.includes('qr-code') && !contactHtml.includes('qrcode') && !contactHtml.toLowerCase().includes('qr code'), 'contact.html strictly does not share QR code');
+assert(faqHtml.includes('wynddpc@sbi'), 'faq.html contains UPI ID wynddpc@sbi');
+assert(faqHtml.includes('33175259937') && faqHtml.includes('171412002000112'), 'faq.html contains Bank Account numbers in Remittance FAQ');
 
 // 8. VERIFYING NEAT HEADER ALIGNMENT ACROSS ALL 16 PAGES
 console.log('\n--- 8. Header Alignment & Structure Across All 16 Pages ---');
