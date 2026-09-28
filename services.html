@@ -127,12 +127,12 @@
 
   <!-- Main Content -->
   <main id="main-content">
-    
-    <!-- Section Navigation Anchors / Filter Tabs -->
+       <!-- Section Navigation Anchors / Filter Tabs -->
     <div class="container" style="padding-top: var(--space-8);">
       <div class="services-tabs" role="tablist">
         <a href="#deposits" class="tab-btn active" role="tab">A. Deposits &amp; Savings</a>
-        <a href="#loans" class="tab-btn" role="tab">B. Member Loans</a>
+        <a href="#schemes" class="tab-btn" role="tab">B. Monthly &amp; Group Schemes</a>
+        <a href="#loans" class="tab-btn" role="tab">C. Member Loans</a>
       </div>
       
       <div class="alert-box alert-info">
@@ -151,8 +151,8 @@
       <div class="container">
         <div class="section-header section-header-left">
           <span class="section-subtitle">Category A</span>
-          <h2 id="deposits-heading" class="section-title">Deposits &amp; Savings Schemes</h2>
-          <p class="section-lead">Secure thrift schemes formulated to provide healthy returns and financial stability for police personnel and their families.</p>
+          <h2 id="deposits-heading" class="section-title">Deposits &amp; Savings Accounts</h2>
+          <p class="section-lead">Secure thrift accounts formulated to provide healthy returns, capital safety, and financial liquidity for police personnel and their families.</p>
         </div>
 
         <div class="grid-2">
@@ -160,7 +160,7 @@
           <!-- 1. Savings Deposit -->
           <article class="service-item-card">
             <header class="service-card-header">
-              <span class="service-badge-pill deposit">Deposit Scheme 1</span>
+              <span class="service-badge-pill deposit">Deposit Account 1</span>
               <h3 class="service-card-title">Savings Deposit</h3>
               <p class="service-card-intended"><strong>Intended For:</strong> All active and eligible member police personnel needing regular liquid savings.</p>
             </header>
@@ -218,7 +218,8 @@
               </div>
             </div>
             <footer class="service-card-actions">
-              <a href="downloads.html?category=deposit" class="btn btn-primary btn-sm js-placeholder-download" data-doc-name="Savings Deposit Application">
+              <a href="assets/downloads/savings-deposit-application.pdf" target="_blank" class="btn btn-primary btn-sm">
+                <svg style="width:14px; height:14px; fill:currentColor; margin-right:4px;" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
                 Download Application Form
               </a>
               <a href="contact.html" class="btn btn-secondary btn-sm">Enquire</a>
@@ -228,7 +229,7 @@
           <!-- 2. Recurring Deposit -->
           <article class="service-item-card">
             <header class="service-card-header">
-              <span class="service-badge-pill deposit">Deposit Scheme 2</span>
+              <span class="service-badge-pill deposit">Deposit Account 2</span>
               <h3 class="service-card-title">Recurring Deposit</h3>
               <p class="service-card-intended"><strong>Intended For:</strong> Members wishing to build a substantial lump-sum through fixed monthly contributions.</p>
             </header>
@@ -282,7 +283,8 @@
               </div>
             </div>
             <footer class="service-card-actions">
-              <a href="downloads.html?category=deposit" class="btn btn-primary btn-sm js-placeholder-download" data-doc-name="Recurring Deposit Application">
+              <a href="assets/downloads/recurring-deposit-application.pdf" target="_blank" class="btn btn-primary btn-sm">
+                <svg style="width:14px; height:14px; fill:currentColor; margin-right:4px;" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
                 Download Application Form
               </a>
               <a href="contact.html" class="btn btn-secondary btn-sm">Enquire</a>
@@ -290,77 +292,100 @@
           </article>
 
           <!-- 3. Fixed Deposit -->
-          <article class="service-item-card">
+          <article class="service-item-card" style="grid-column: 1 / -1;">
             <header class="service-card-header">
-              <span class="service-badge-pill deposit">Deposit Scheme 3</span>
+              <span class="service-badge-pill deposit">Deposit Account 3</span>
               <h3 class="service-card-title">Fixed Deposit</h3>
               <p class="service-card-intended"><strong>Intended For:</strong> Members seeking secure term investment with assured interest returns.</p>
             </header>
             <div class="service-card-body">
-              <p>Term deposit offering guaranteed security and competitive returns for member funds deposited for a specific duration.</p>
-              
-              <ul class="service-features-list">
-                <li>
-                  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                  <span>Loan against Fixed Deposit facility available for emergent needs.</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                  <span>Flexible tenure options with periodic interest payout or cumulative maturity.</span>
-                </li>
-              </ul>
+              <div class="grid-2" style="gap: var(--space-6);">
+                <div>
+                  <p>Term deposit offering guaranteed security and competitive returns for member funds deposited for a specific duration.</p>
+                  
+                  <ul class="service-features-list">
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                      <span>Loan against Fixed Deposit facility available for emergent needs.</span>
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                      <span>Flexible tenure options with periodic interest payout or cumulative maturity.</span>
+                    </li>
+                  </ul>
+                </div>
 
-              <div class="spec-table-wrap">
-                <table class="spec-table">
-                  <tbody>
-                    <tr>
-                      <th>Minimum Amount</th>
-                      <td><strong>₹500.00</strong> (Min. ₹25,000 for monthly/quarterly interest payout)</td>
-                    </tr>
-                    <tr>
-                      <th>Minimum Tenure</th>
-                      <td><strong>15 Days</strong> (up to multi-year flexible tenures)</td>
-                    </tr>
-                    <tr>
-                      <th>Interest Payout</th>
-                      <td><strong>Monthly, Quarterly, Half-Yearly, Annually</strong>, or at Maturity</td>
-                    </tr>
-                    <tr>
-                      <th>Auto Transfer</th>
-                      <td>Direct credit to depositor's <strong>SB Account</strong> or <strong>Loan Account</strong></td>
-                    </tr>
-                    <tr>
-                      <th>Deposit Loan Facility</th>
-                      <td><strong>80% to 90%</strong> of deposit value (at FD Interest Rate + 1% min)</td>
-                    </tr>
-                    <tr>
-                      <th>Eligibility &amp; Accounts</th>
-                      <td>Individuals, Joint accounts, Institutions &amp; Minors (with Guardian option)</td>
-                    </tr>
-                    <tr>
-                      <th>Nomination &amp; Security</th>
-                      <td>Nomination available &bull; Certificate signed by 2 authorised signatories</td>
-                    </tr>
-                    <tr>
-                      <th>Premature Closure</th>
-                      <td>Permitted as per Society rules (applicable rate adjustment)</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="spec-table-wrap">
+                  <table class="spec-table">
+                    <tbody>
+                      <tr>
+                        <th>Minimum Amount</th>
+                        <td><strong>₹500.00</strong> (Min. ₹25,000 for monthly/quarterly interest payout)</td>
+                      </tr>
+                      <tr>
+                        <th>Minimum Tenure</th>
+                        <td><strong>15 Days</strong> (up to multi-year flexible tenures)</td>
+                      </tr>
+                      <tr>
+                        <th>Interest Payout</th>
+                        <td><strong>Monthly, Quarterly, Half-Yearly, Annually</strong>, or at Maturity</td>
+                      </tr>
+                      <tr>
+                        <th>Auto Transfer</th>
+                        <td>Direct credit to depositor's <strong>SB Account</strong> or <strong>Loan Account</strong></td>
+                      </tr>
+                      <tr>
+                        <th>Deposit Loan Facility</th>
+                        <td><strong>80% to 90%</strong> of deposit value (at FD Interest Rate + 1% min)</td>
+                      </tr>
+                      <tr>
+                        <th>Eligibility &amp; Accounts</th>
+                        <td>Individuals, Joint accounts, Institutions &amp; Minors (with Guardian option)</td>
+                      </tr>
+                      <tr>
+                        <th>Nomination &amp; Security</th>
+                        <td>Nomination available &bull; Certificate signed by 2 authorised signatories</td>
+                      </tr>
+                      <tr>
+                        <th>Premature Closure</th>
+                        <td>Permitted as per Society rules (applicable rate adjustment)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
             <footer class="service-card-actions">
-              <a href="downloads.html?category=deposit" class="btn btn-primary btn-sm js-placeholder-download" data-doc-name="Fixed Deposit Application">
+              <a href="assets/downloads/fixed-deposit-application.pdf" target="_blank" class="btn btn-primary btn-sm">
+                <svg style="width:14px; height:14px; fill:currentColor; margin-right:4px;" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
                 Download Application Form
               </a>
               <a href="contact.html" class="btn btn-secondary btn-sm">Enquire</a>
             </footer>
           </article>
 
-          <!-- 4. Monthly Savings Scheme -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CATEGORY B: MONTHLY & GROUP SCHEMES
+         ==================================================================== -->
+    <section id="schemes" class="section section-alt" aria-labelledby="schemes-heading">
+      <div class="container">
+        <div class="section-header section-header-left">
+          <span class="section-subtitle">Category B</span>
+          <h2 id="schemes-heading" class="section-title">Monthly &amp; Group Schemes</h2>
+          <p class="section-lead">Specialized structured monthly thrift and collective advance schemes providing flexible salary-based instalments, credit advances, and mutual benefits.</p>
+        </div>
+
+        <div class="grid-2">
+          
+          <!-- 1. Monthly Savings Scheme -->
           <article class="service-item-card">
             <header class="service-card-header">
-              <span class="service-badge-pill deposit">Deposit Scheme 4</span>
+              <span class="service-badge-pill scheme">Thrift Scheme 1</span>
               <h3 class="service-card-title">Monthly Savings Scheme</h3>
               <p class="service-card-intended"><strong>Intended For:</strong> Member police personnel wanting tailored monthly thrift options.</p>
             </header>
@@ -374,7 +399,7 @@
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                  <span>Safe and reliable institutional backing.</span>
+                  <span>Safe and reliable institutional backing with up to 90% advance facility.</span>
                 </li>
               </ul>
 
@@ -418,73 +443,64 @@
               </div>
             </div>
             <footer class="service-card-actions">
-              <a href="downloads.html?category=deposit" class="btn btn-primary btn-sm js-placeholder-download" data-doc-name="Monthly Savings Scheme Application">
-                Download Application Form
-              </a>
-              <a href="contact.html" class="btn btn-secondary btn-sm">Enquire</a>
+              <a href="contact.html" class="btn btn-primary btn-sm">Enquire Details &rarr;</a>
             </footer>
           </article>
 
-          <!-- 5. Group Deposit Scheme -->
-          <article class="service-item-card" style="grid-column: 1 / -1;">
+          <!-- 2. Group Deposit Scheme -->
+          <article class="service-item-card">
             <header class="service-card-header">
-              <span class="service-badge-pill deposit">Deposit Scheme 5</span>
+              <span class="service-badge-pill scheme">Group Scheme 2</span>
               <h3 class="service-card-title">Group Deposit Scheme</h3>
               <p class="service-card-intended"><strong>Intended For:</strong> Member groups and unit personnel seeking mutual co-operative savings.</p>
             </header>
             <div class="service-card-body">
-              <div class="grid-2" style="gap: var(--space-6);">
-                <div>
-                  <p>A collective co-operative deposit mechanism facilitating mutual thrift and monthly credit access among member police personnel.</p>
-                  <ul class="service-features-list">
-                    <li>
-                      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                      <span>Monthly lottery draw or bidding advance (70% to 95% of monthly pool).</span>
-                    </li>
-                    <li>
-                      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                      <span>Dividend sharing: Excess pool balance distributed as discount on next month.</span>
-                    </li>
-                  </ul>
-                </div>
+              <p>A collective co-operative deposit mechanism facilitating mutual thrift and monthly credit access among member police personnel.</p>
+              
+              <ul class="service-features-list">
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  <span>Monthly lottery draw or bidding advance (70% to 95% of monthly pool).</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  <span>Dividend sharing: Excess pool balance distributed as discount on next month.</span>
+                </li>
+              </ul>
 
-                <div class="spec-table-wrap">
-                  <table class="spec-table">
-                    <tbody>
-                      <tr>
-                        <th>Group Size &amp; Tenure</th>
-                        <td><strong>25 to 100 Members / Months</strong> (multiples of ₹100)</td>
-                      </tr>
-                      <tr>
-                        <th>Monthly Advance</th>
-                        <td><strong>70% to 95%</strong> of group instalment pool</td>
-                      </tr>
-                      <tr>
-                        <th>Draw Schedule</th>
-                        <td><strong>2nd Saturday of every month at 11:00 AM</strong></td>
-                      </tr>
-                      <tr>
-                        <th>Dividend Sharing</th>
-                        <td>Excess sum after 5% service charge shared equally as discount</td>
-                      </tr>
-                      <tr>
-                        <th>Passbook &amp; Duplicate</th>
-                        <td>Official passbook issued &bull; Duplicate issued on nominal fee</td>
-                      </tr>
-                      <tr>
-                        <th>Eligibility</th>
-                        <td>A-Class and D-Class members &amp; Society employees</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <div class="spec-table-wrap">
+                <table class="spec-table">
+                  <tbody>
+                    <tr>
+                      <th>Group Size &amp; Tenure</th>
+                      <td><strong>25 to 100 Members / Months</strong> (multiples of ₹100)</td>
+                    </tr>
+                    <tr>
+                      <th>Monthly Advance</th>
+                      <td><strong>70% to 95%</strong> of group instalment pool</td>
+                    </tr>
+                    <tr>
+                      <th>Draw Schedule</th>
+                      <td><strong>2nd Saturday of every month at 11:00 AM</strong></td>
+                    </tr>
+                    <tr>
+                      <th>Dividend Sharing</th>
+                      <td>Excess sum after 5% service charge shared equally as discount</td>
+                    </tr>
+                    <tr>
+                      <th>Passbook &amp; Duplicate</th>
+                      <td>Official passbook issued &bull; Duplicate issued on nominal fee</td>
+                    </tr>
+                    <tr>
+                      <th>Eligibility</th>
+                      <td>A-Class and D-Class members &amp; Society employees</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
             <footer class="service-card-actions">
-              <a href="downloads.html?category=deposit" class="btn btn-primary btn-sm js-placeholder-download" data-doc-name="Group Deposit Scheme Application">
-                Download Application Form
-              </a>
-              <a href="contact.html" class="btn btn-secondary btn-sm">Enquire</a>
+              <a href="contact.html" class="btn btn-primary btn-sm">Enquire Details &rarr;</a>
             </footer>
           </article>
 
@@ -494,12 +510,12 @@
     </section>
 
     <!-- ====================================================================
-         CATEGORY B: MEMBER LOANS
+         CATEGORY C: MEMBER LOANS
          ==================================================================== -->
-    <section id="loans" class="section section-alt" aria-labelledby="loans-heading">
+    <section id="loans" class="section" aria-labelledby="loans-heading">
       <div class="container">
         <div class="section-header section-header-left">
-          <span class="section-subtitle">Category B</span>
+          <span class="section-subtitle">Category C</span>
           <h2 id="loans-heading" class="section-title">Member Loan Products</h2>
           <p class="section-lead">Member-first credit facilities designed to support police personnel with transparent terms, low processing hurdles, and flexible repayment.</p>
         </div>

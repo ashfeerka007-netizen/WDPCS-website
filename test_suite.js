@@ -42,6 +42,8 @@ const REQUIRED_ASSETS = [
   'assets/images/society-building.jpg',
   'assets/images/building-inauguration-2014-1.jpg',
   'assets/images/building-inauguration-2014-2.jpg',
+  'assets/images/rebuild-kerala-house-handover-2018.jpg',
+  'assets/images/care-home-second-house-handover-2018.jpg',
   'assets/images/favicon.svg',
   'assets/images/room-guest-room.svg',
   'assets/images/room-dormitory.svg',
@@ -57,6 +59,11 @@ const REQUIRED_ASSETS = [
   'assets/downloads/deposit-loan-overdraft-application.pdf',
   'assets/downloads/festival-loan-application.pdf',
   'assets/downloads/medium-term-loan-application.pdf',
+  'assets/downloads/savings-deposit-application.pdf',
+  'assets/downloads/recurring-deposit-application.pdf',
+  'assets/downloads/fixed-deposit-application.pdf',
+  'assets/downloads/education-award-application.pdf',
+  'assets/downloads/loan-statement-application.pdf',
   'sitemap.xml',
   'robots.txt'
 ];
@@ -198,16 +205,24 @@ const expectedForms = [
   'Savings Deposit Application',
   'Recurring Deposit Application',
   'Fixed Deposit Application',
-  'Monthly Savings Scheme (MSS) Application',
-  'Group Deposit Scheme (GDS) Application',
   'Education Award for Children',
-  'Application for Loan Statement',
-  'Application for Other Certifications'
+  'Application for Loan Statement'
 ];
 
 expectedForms.forEach(form => {
   assert(downloadsContent.includes(form), `downloads.html contains form: "${form}"`);
 });
+
+assert(downloadsContent.includes('assets/downloads/savings-deposit-application.pdf'), 'downloads.html has direct link to savings-deposit-application.pdf');
+assert(servicesContent.includes('assets/downloads/savings-deposit-application.pdf'), 'services.html has direct link to savings-deposit-application.pdf');
+assert(downloadsContent.includes('assets/downloads/recurring-deposit-application.pdf'), 'downloads.html has direct link to recurring-deposit-application.pdf');
+assert(servicesContent.includes('assets/downloads/recurring-deposit-application.pdf'), 'services.html has direct link to recurring-deposit-application.pdf');
+assert(downloadsContent.includes('assets/downloads/fixed-deposit-application.pdf'), 'downloads.html has direct link to fixed-deposit-application.pdf');
+assert(servicesContent.includes('assets/downloads/fixed-deposit-application.pdf'), 'services.html has direct link to fixed-deposit-application.pdf');
+assert(downloadsContent.includes('assets/downloads/education-award-application.pdf'), 'downloads.html has direct link to education-award-application.pdf');
+assert(downloadsContent.includes('assets/downloads/loan-statement-application.pdf'), 'downloads.html has direct link to loan-statement-application.pdf');
+const noticesPageContent = fs.readFileSync(path.join(ROOT_DIR, 'notices.html'), 'utf-8');
+assert(noticesPageContent.includes('assets/downloads/education-award-application.pdf'), 'notices.html has direct link to education-award-application.pdf');
 
 console.log('\n==================================================');
 console.log('5. VERIFYING INSTITUTIONAL IDENTITY & REGISTRATION');

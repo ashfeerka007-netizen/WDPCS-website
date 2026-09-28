@@ -84,19 +84,20 @@ const SITE_SEARCH_INDEX = [
     description: "Guaranteed term investment offering security and competitive yield with flexible tenure options and deposit loan facility.",
     keywords: "fixed deposit fd term deposit guaranteed interest investment tenure deposit loan"
   },
+  // Monthly & Group Schemes
   {
     title: "Monthly Savings Scheme (MSS)",
-    category: "Deposits",
-    url: "services.html#deposits",
-    description: "Structured monthly thrift plan formulated around police department salary schedules with completion benefits.",
+    category: "Schemes",
+    url: "services.html#schemes",
+    description: "Structured monthly thrift plan formulated around police department salary schedules with up to 90% advance facility and completion bonus.",
     keywords: "monthly savings scheme mss instalment bonus thrift police salary advance"
   },
   {
     title: "Group Deposit Scheme (GDS)",
-    category: "Deposits",
-    url: "services.html#deposits",
-    description: "Collective co-operative deposit mechanism facilitating mutual thrift and monthly credit access among member personnel.",
-    keywords: "group deposit scheme gds collective mutual co-operative savings pool lottery draw advance discount"
+    category: "Schemes",
+    url: "services.html#schemes",
+    description: "Collective co-operative deposit mechanism facilitating mutual thrift and monthly credit access with dividend distribution among member personnel.",
+    keywords: "group deposit scheme gds collective mutual co-operative savings pool draw advance discount dividend"
   },
 
   // Member Loan Products
@@ -207,15 +208,15 @@ const SITE_SEARCH_INDEX = [
     description: "Requisition form for obtaining certified loan ledgers, outstanding balance certificates, and interest tax statements.",
     keywords: "loan statement certificate ledger balance tax clearance requisition"
   },
-  {
-    title: "Application for Other Certifications & Statements",
-    category: "Downloads",
-    url: "downloads.html?category=other",
-    description: "Requisition form for No-Objection Certificates (NOC), non-liability endorsements, and membership status letters.",
-    keywords: "certifications statement noc non dues liability membership letter"
-  },
 
   // Supporting Pages & FAQs
+  {
+    title: "Photo Gallery & Archives",
+    category: "About Society",
+    url: "gallery.html",
+    description: "Visual archive documenting building inaugurations, Care Home 2018 (Rebuild Kerala) house handovers, General Body meetings, and member events.",
+    keywords: "gallery photos album images building inauguration care home 2018 care home rebuild kerala flood relief house handover president sunny joseph joint registrar ck saseendran mla kalpetta"
+  },
   {
     title: "Notices & Circulars",
     category: "Member Services",
