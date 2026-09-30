@@ -52,7 +52,7 @@ const SITE_SEARCH_INDEX = [
     category: "Support",
     url: "contact.html",
     description: "Official address at Kalpetta North, telephone 04936 205940, mobile 8301995940 (WhatsApp), email wdpcs.208@gmail.com, working hours 10:00 AM to 5:00 PM, and direct enquiry submission.",
-    keywords: "contact enquiry address telephone phone 04936205940 mobile 8301995940 whatsapp email wdpcs.208@gmail.com kalpetta north wayanad 673122 helpdesk office hours timings"
+    keywords: "contact enquiry address telephone phone 04936205940 mobile 8301995940 whatsapp email wdpcs.208@gmail.com kalpetta north wayanad 673122 helpdesk office hours timings google maps location map directions gps route navigation"
   },
   {
     title: "Official Bank Account & UPI Payment Details",
