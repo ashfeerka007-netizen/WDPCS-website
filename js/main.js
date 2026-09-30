@@ -1,6 +1,6 @@
 /**
  * WAYANAD DISTRICT POLICE CO-OPERATIVE SOCIETY LTD. NO. W 208
- * Core JavaScript & Global Utilities
+ * Core JavaScript, Mobile Utilities & Global Handlers
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initModals();
   initPlaceholderAlerts();
   initHeaderSearch();
+  initBackToTop();
+  initTableResponsiveWrappers();
 });
 
 function initHeaderSearch() {
@@ -24,7 +26,7 @@ function initHeaderSearch() {
 }
 
 /* ==========================================================================
-   Mobile Navigation
+   Mobile Navigation Drawer & Touch Interaction
    ========================================================================== */
 function initMobileNav() {
   const toggleBtn = document.querySelector('.mobile-menu-toggle');
@@ -32,26 +34,53 @@ function initMobileNav() {
 
   if (!toggleBtn || !mainNav) return;
 
+  function openMenu() {
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    mainNav.classList.add('active');
+  }
+
+  function closeMenu() {
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    mainNav.classList.remove('active');
+  }
+
   toggleBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-    toggleBtn.setAttribute('aria-expanded', !isExpanded);
-    mainNav.classList.toggle('active');
+    if (isExpanded) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Close when clicking any nav link inside mobile drawer
+  mainNav.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 1160) {
+        closeMenu();
+      }
+    });
   });
 
   // Close when clicking outside
   document.addEventListener('click', (e) => {
     if (!mainNav.contains(e.target) && !toggleBtn.contains(e.target)) {
-      mainNav.classList.remove('active');
-      toggleBtn.setAttribute('aria-expanded', 'false');
+      closeMenu();
     }
   });
 
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mainNav.classList.contains('active')) {
-      mainNav.classList.remove('active');
-      toggleBtn.setAttribute('aria-expanded', 'false');
+      closeMenu();
+    }
+  });
+
+  // Handle resize from mobile to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1160 && mainNav.classList.contains('active')) {
+      closeMenu();
     }
   });
 }
@@ -204,7 +233,6 @@ function showPlaceholderModal(docName) {
       </div>
     `;
     document.body.appendChild(modal);
-    modal.querySelector('.modal-close-btn').addEventListener('click', () => closeModal(modal));
     modal.querySelectorAll('.modal-close-btn').forEach(b => b.addEventListener('click', () => closeModal(modal)));
     modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(modal); });
   }
@@ -252,4 +280,61 @@ function showExternalBookingModal(serviceName) {
     modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(modal); });
   }
   openModal('placeholderBookingModal');
+}
+
+/* ==========================================================================
+   Floating Back to Top Touch Button
+   ========================================================================== */
+function initBackToTop() {
+  let btn = document.getElementById('backToTopBtn');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'backToTopBtn';
+    btn.className = 'back-to-top-btn';
+    btn.setAttribute('type', 'button');
+    btn.setAttribute('aria-label', 'Back to top of page');
+    btn.innerHTML = `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+      </svg>
+    `;
+    document.body.appendChild(btn);
+  }
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 300) {
+          btn.classList.add('visible');
+        } else {
+          btn.classList.remove('visible');
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+/* ==========================================================================
+   Table Responsive Safety Wrapper
+   ========================================================================== */
+function initTableResponsiveWrappers() {
+  document.querySelectorAll('table').forEach(table => {
+    const parent = table.parentElement;
+    if (parent && !parent.classList.contains('spec-table-wrap') && !parent.classList.contains('table-responsive') && !parent.style.overflowX) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'table-responsive';
+      parent.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    }
+  });
 }

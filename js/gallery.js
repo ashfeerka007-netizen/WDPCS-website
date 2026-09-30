@@ -1,6 +1,6 @@
 /**
  * WAYANAD DISTRICT POLICE CO-OPERATIVE SOCIETY LTD. NO. W 208
- * Gallery Filtering & Lightbox Modal Handler
+ * Gallery Filtering & Lightbox Modal Handler with Mobile Touch Gestures
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -104,6 +104,36 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxModal.addEventListener('click', (e) => {
       if (e.target === lightboxModal) closeLightbox();
     });
+
+    // Touch Swipe Gestures for Mobile Lightbox
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let touchStartY = 0;
+    let touchEndY = 0;
+
+    lightboxModal.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    lightboxModal.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+      // Ensure horizontal swipe is dominant and above 40px threshold
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+        if (diffX < 0) {
+          nextImage(); // Swipe left -> next image
+        } else {
+          prevImage(); // Swipe right -> previous image
+        }
+      }
+    }
   }
 
   // Keyboard navigation
