@@ -1,0 +1,16 @@
+{
+  "name": "Wayanad District Police Co-operative Society Ltd No. W 208",
+  "short_name": "WDPCS",
+  "description": "Official website of Wayanad District Police Co-operative Society Ltd No. W 208, providing credit, savings, deposits, and welfare services for Kerala Police personnel in Wayanad.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b192c",
+  "theme_color": "#1e3e62",
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

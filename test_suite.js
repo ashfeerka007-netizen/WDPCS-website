@@ -65,7 +65,8 @@ const REQUIRED_ASSETS = [
   'assets/downloads/education-award-application.pdf',
   'assets/downloads/loan-statement-application.pdf',
   'sitemap.xml',
-  'robots.txt'
+  'robots.txt',
+  'site.webmanifest'
 ];
 
 let totalTests = 0;
@@ -419,6 +420,67 @@ REQUIRED_PAGES.forEach(page => {
   assert(content.includes('class="mobile-menu-toggle"'), `${page} contains .mobile-menu-toggle`);
 });
 
+// 9. COMPLETE SEO, GEO, AEO, SCHEMA.ORG & CANONICAL VERIFICATION
+console.log('\n--- 9. Complete SEO, GEO, AEO, Schema.org & Canonical Verification ---');
+
+const PUBLIC_INDEXABLE_PAGES = REQUIRED_PAGES.filter(p => p !== '404.html');
+
+PUBLIC_INDEXABLE_PAGES.forEach(page => {
+  const content = fs.readFileSync(path.join(ROOT_DIR, page), 'utf-8');
+  
+  // Canonical check
+  assert(content.includes('rel="canonical"'), `${page} contains canonical link`);
+  assert(content.includes('https://ashfeerka007-netizen.github.io/WDPCS-website/'), `${page} contains canonical domain`);
+  
+  // Robots check
+  assert(content.includes('<meta name="robots" content="index, follow">'), `${page} contains index, follow robots meta`);
+  
+  // Open Graph & Social Cards
+  assert(content.includes('property="og:title"'), `${page} contains Open Graph title`);
+  assert(content.includes('property="og:description"'), `${page} contains Open Graph description`);
+  assert(content.includes('name="twitter:card"'), `${page} contains Twitter card`);
+  
+  // Manifest & Favicon
+  assert(content.includes('site.webmanifest'), `${page} links to site.webmanifest`);
+  assert(content.includes('assets/images/favicon.svg'), `${page} links to favicon`);
+  
+  // Skip to content for Accessibility
+  assert(content.includes('class="skip-to-content"') || content.includes('class="skip-link"'), `${page} contains accessible skip link`);
+  
+  // Structured Data (JSON-LD)
+  assert(content.includes('<script type="application/ld+json">'), `${page} contains JSON-LD structured data`);
+  
+  // Parse and validate JSON-LD
+  const jsonLdMatch = content.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+  assert(jsonLdMatch && jsonLdMatch[1], `${page} has parseable JSON-LD content`);
+  if (jsonLdMatch && jsonLdMatch[1]) {
+    try {
+      const parsedSchema = JSON.parse(jsonLdMatch[1]);
+      assert(parsedSchema['@context'] === 'https://schema.org', `${page} JSON-LD context is schema.org`);
+      assert(parsedSchema['@graph'] && Array.isArray(parsedSchema['@graph']), `${page} JSON-LD contains valid @graph array`);
+    } catch (err) {
+      assert(false, `${page} JSON-LD syntax error: ${err.message}`);
+    }
+  }
+});
+
+// 404 page robots check
+const notFoundHtml = fs.readFileSync(path.join(ROOT_DIR, '404.html'), 'utf-8');
+assert(notFoundHtml.includes('<meta name="robots" content="noindex, nofollow">'), '404.html contains noindex, nofollow meta');
+
+// Robots.txt & Sitemap.xml Canonical Domain Checks
+const robotsContent = fs.readFileSync(path.join(ROOT_DIR, 'robots.txt'), 'utf-8');
+assert(robotsContent.includes('https://ashfeerka007-netizen.github.io/WDPCS-website/sitemap.xml'), 'robots.txt contains GitHub Pages canonical sitemap URL');
+assert(robotsContent.includes('Allow: /'), 'robots.txt allows indexing');
+
+const sitemapContent = fs.readFileSync(path.join(ROOT_DIR, 'sitemap.xml'), 'utf-8');
+PUBLIC_INDEXABLE_PAGES.forEach(page => {
+  const expectedUrl = page === 'index.html' 
+    ? 'https://ashfeerka007-netizen.github.io/WDPCS-website/'
+    : `https://ashfeerka007-netizen.github.io/WDPCS-website/${page}`;
+  assert(sitemapContent.includes(expectedUrl), `sitemap.xml contains indexable URL: ${expectedUrl}`);
+});
+
 console.log('\n==================================================');
 console.log(`TEST SUMMARY: ${passedTests}/${totalTests} tests passed (${failedTests} failures)`);
 console.log('==================================================');
@@ -429,3 +491,4 @@ if (failedTests > 0) {
   console.log('\n>>> ALL INSTITUTIONAL WEBSITE INTEGRITY TESTS PASSED SUCCESSFULLY! <<<');
   process.exit(0);
 }
+

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wayanadpolicesociety.org/sitemap.xml
+Sitemap: https://ashfeerka007-netizen.github.io/WDPCS-website/sitemap.xml
