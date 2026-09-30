@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<body style="margin:0; padding:0;">
+<iframe id="testframe" src="http://localhost:8080/downloads.html" style="width:360px; height:800px; border:none;"></iframe>
+<script>
+const frame = document.getElementById('testframe');
+frame.onload = () => {
+  setTimeout(() => {
+    const doc = frame.contentDocument;
+    const win = frame.contentWindow;
+    const vw = win.innerWidth;
+    const bodyWidth = doc.body.scrollWidth;
+    const docWidth = doc.documentElement.scrollWidth;
+    
+    const badElements = [];
+    doc.querySelectorAll('*').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.right > vw + 1 || r.width > vw + 1) {
+        // Exclude html/body/wrappers
+        if (el.tagName !== 'HTML' && el.tagName !== 'BODY') {
+          badElements.push({
+            tag: el.tagName,
+            cls: el.className,
+            id: el.id,
+            right: Math.round(r.right),
+            width: Math.round(r.width),
+            text: (el.textContent || '').trim().slice(0, 30)
+          });
+        }
+      }
+    });
+
+    const out = {
+      page: 'downloads.html',
+      width: 360,
+      vw: vw,
+      bodyWidth: bodyWidth,
+      docWidth: docWidth,
+      badCount: badElements.length,
+      badElements: badElements.slice(0, 10)
+    };
+    
+    const div = document.createElement('div');
+    div.id = 'RESULTS_JSON';
+    div.textContent = JSON.stringify(out);
+    document.body.appendChild(div);
+  }, 300);
+};
+</script>
+</body>
+</html>
+  

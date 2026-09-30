@@ -73,6 +73,38 @@ textarea,
     position: relative;
     padding-top: var(--space-2);
     padding-bottom: var(--space-2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .society-brand {
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+    gap: 8px;
+  }
+
+  .brand-text {
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+
+  .brand-title {
+    font-size: 0.86rem;
+    line-height: 1.15;
+    white-space: normal;
+  }
+
+  .header-right {
+    flex: 0 0 auto;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .mobile-menu-toggle {
@@ -92,6 +124,7 @@ textarea,
     cursor: pointer;
     transition: all var(--transition-fast);
     z-index: 95;
+    flex-shrink: 0;
   }
 
   .mobile-menu-toggle:hover,
@@ -112,11 +145,13 @@ textarea,
     border-left: none;
     padding-left: 0;
     gap: var(--space-2);
+    flex-shrink: 0;
   }
 
   .header-search-btn {
     min-height: var(--touch-target-min);
     padding: 8px 12px;
+    flex-shrink: 0;
   }
 
   /* Slide-down Mobile Navigation Drawer */
@@ -378,20 +413,50 @@ textarea,
 
   .document-card {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: var(--space-3);
+    padding: var(--space-4);
+  }
+
+  .document-icon-badge {
+    align-self: flex-start;
+  }
+
+  .document-info {
+    width: 100%;
+  }
+
+  .document-title {
+    font-size: 1rem;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+
+  .document-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    font-size: 0.75rem;
+    align-items: center;
   }
 
   .document-actions {
     width: 100%;
     margin-top: var(--space-2);
     display: flex;
-    gap: var(--space-2);
+    flex-direction: row;
+    gap: 8px;
   }
 
   .document-actions .btn {
-    flex: 1;
+    flex: 1 1 50%;
+    min-width: 0;
+    justify-content: center;
     min-height: var(--touch-target-min);
+    font-size: 0.825rem;
+    padding: 8px 8px;
+    text-align: center;
+    white-space: nowrap;
   }
 
   .gallery-grid {
@@ -434,20 +499,80 @@ textarea,
     padding-right: var(--space-4);
   }
 
-  /* Header Branding on Mobile */
+  /* Header Branding & Action Buttons on Mobile */
+  .header-inner {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .society-brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    gap: 6px;
+  }
+
   .brand-logo-wrap {
-    width: 44px;
-    height: 44px;
-    padding: 3px;
+    width: 32px;
+    height: 32px;
+    padding: 2px;
+    flex-shrink: 0;
   }
 
   .brand-title {
-    font-size: 0.88rem;
+    font-size: 0.72rem;
     line-height: 1.15;
+    white-space: normal;
   }
 
   .brand-reg {
-    font-size: 0.725rem;
+    font-size: 0.6rem;
+    gap: 3px;
+  }
+
+  .header-right {
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .header-search-btn {
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    justify-content: center;
+    border-radius: var(--radius-md);
+  }
+
+  .header-search-btn span {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 8px;
+    height: 32px;
+    min-height: 32px;
+    font-size: 0.75rem;
+    gap: 3px;
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
   }
 
   .brand-subtitle {
@@ -759,23 +884,43 @@ textarea,
    ========================================================================== */
 @media (max-width: 380px) {
   .brand-logo-wrap {
-    width: 38px;
-    height: 38px;
+    width: 30px;
+    height: 30px;
     padding: 2px;
   }
 
   .brand-title {
-    font-size: 0.82rem;
+    font-size: 0.70rem;
+    line-height: 1.15;
   }
 
   .brand-reg {
-    font-size: 0.68rem;
+    font-size: 0.58rem;
     gap: 3px;
   }
 
   .brand-reg-tag {
-    font-size: 0.65rem;
+    font-size: 0.58rem;
     padding: 1px 4px;
+  }
+
+  .header-actions {
+    gap: 3px;
+  }
+
+  .mobile-menu-toggle {
+    padding: 4px 6px;
+    height: 30px;
+    min-height: 30px;
+    font-size: 0.70rem;
+  }
+
+  .header-search-btn {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    padding: 4px;
   }
 
   .hero-title {
@@ -799,6 +944,23 @@ textarea,
 
   .breadcrumb-list {
     font-size: 0.75rem;
+  }
+
+  .document-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .document-actions .btn {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .downloads-stats-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
 }
 
