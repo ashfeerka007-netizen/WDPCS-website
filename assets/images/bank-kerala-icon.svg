@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" aria-label="Kerala Bank Official Emblem">
+  <defs>
+    <linearGradient id="kbIconRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <linearGradient id="kbIconGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded Rect / Shield Base -->
+  <rect x="2" y="2" width="96" height="96" rx="22" fill="url(#kbIconRed)"/>
+  <!-- Decorative Ring -->
+  <circle cx="50" cy="50" r="38" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3"/>
+  <!-- Twin Sprout / Palm Motif -->
+  <path d="M 50 20 C 36 32 34 52 50 70 C 66 52 64 32 50 20 Z" fill="#ffffff"/>
+  <path d="M 50 28 C 40 37 38 52 50 64 C 62 52 60 37 50 28 Z" fill="url(#kbIconGreen)"/>
+  <circle cx="50" cy="72" r="5" fill="#facc15"/>
+</svg>

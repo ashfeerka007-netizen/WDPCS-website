@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" aria-label="Kerala Bank Official Logo">
+  <defs>
+    <linearGradient id="kbRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="kbGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+  </defs>
+  <!-- Kerala Bank Official Emblem -->
+  <g transform="translate(10, 8)">
+    <!-- Red Circular Shield -->
+    <rect x="0" y="0" width="64" height="64" rx="14" fill="url(#kbRedGrad)"/>
+    <!-- Inner White Ring -->
+    <circle cx="32" cy="32" r="24" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+    <!-- Stylized Palm / Sprout Leaves -->
+    <path d="M 32 15 C 24 22 22 34 32 45 C 42 34 40 22 32 15 Z" fill="#ffffff"/>
+    <path d="M 32 20 C 26 26 25 34 32 42 C 39 34 38 26 32 20 Z" fill="url(#kbGreenGrad)"/>
+    <circle cx="32" cy="46" r="3.5" fill="#facc15"/>
+  </g>
+  <!-- Kerala Bank Typography -->
+  <g transform="translate(88, 18)">
+    <text x="0" y="27" font-family="'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="25" font-weight="900" fill="#b91c1c" letter-spacing="-0.5">KERALA BANK</text>
+    <text x="0" y="44" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#047857" letter-spacing="0.3">KERALA STATE CO-OP BANK</text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" width="280" height="80" aria-label="Unified Payments Interface (UPI) Official Logo">
+  <defs>
+    <linearGradient id="upiGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#097939"/>
+      <stop offset="100%" stop-color="#005a2b"/>
+    </linearGradient>
+    <linearGradient id="upiOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f47920"/>
+      <stop offset="100%" stop-color="#e35205"/>
+    </linearGradient>
+  </defs>
+  <!-- UPI Dual Arrows Icon -->
+  <g transform="translate(12, 12)">
+    <!-- Orange Triangle / Arrow -->
+    <polygon points="12,4 40,28 12,52 24,28" fill="url(#upiOrange)"/>
+    <!-- Green Triangle / Arrow -->
+    <polygon points="28,4 56,28 28,52 40,28" fill="url(#upiGreen)"/>
+  </g>
+  <!-- UPI Wordmark -->
+  <g transform="translate(80, 18)">
+    <text x="0" y="30" font-family="'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="900" font-style="italic" fill="#0f2442" letter-spacing="1">UPI</text>
+    <text x="0" y="45" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="800" fill="#097939" letter-spacing="0.4">UNIFIED PAYMENTS INTERFACE</text>
+  </g>
+</svg>

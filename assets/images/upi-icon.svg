@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" aria-label="UPI Payment Official Icon">
+  <defs>
+    <linearGradient id="upiIconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2442"/>
+      <stop offset="100%" stop-color="#071324"/>
+    </linearGradient>
+    <linearGradient id="upiIconGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#097939"/>
+      <stop offset="100%" stop-color="#005a2b"/>
+    </linearGradient>
+    <linearGradient id="upiIconOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f47920"/>
+      <stop offset="100%" stop-color="#e35205"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded Rect Dark Navy Base -->
+  <rect x="2" y="2" width="96" height="96" rx="22" fill="url(#upiIconBg)" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+  <!-- Dual UPI Parallelogram Arrows -->
+  <g transform="translate(18, 16)">
+    <polygon points="12,6 48,34 12,62 26,34" fill="url(#upiIconOrange)"/>
+    <polygon points="32,6 68,34 32,62 46,34" fill="url(#upiIconGreen)"/>
+  </g>
+</svg>

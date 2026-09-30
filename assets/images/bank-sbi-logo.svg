@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80" aria-label="State Bank of India Official Logo">
+  <defs>
+    <linearGradient id="sbiBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00a5e5"/>
+      <stop offset="100%" stop-color="#0066b2"/>
+    </linearGradient>
+  </defs>
+  <!-- SBI Official Keyhole Emblem -->
+  <g transform="translate(10, 5)">
+    <!-- Outer Blue Circle -->
+    <circle cx="35" cy="35" r="35" fill="url(#sbiBlueGrad)"/>
+    <!-- Keyhole / Drop Cutout -->
+    <circle cx="35" cy="27" r="11" fill="#ffffff"/>
+    <rect x="30.5" y="27" width="9" height="38" fill="#ffffff"/>
+  </g>
+  <!-- SBI Wordmark -->
+  <g transform="translate(95, 20)">
+    <text x="0" y="32" font-family="'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="900" fill="#003366" letter-spacing="1">SBI</text>
+    <text x="0" y="47" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#0066b2" letter-spacing="0.5">STATE BANK OF INDIA</text>
+  </g>
+</svg>
