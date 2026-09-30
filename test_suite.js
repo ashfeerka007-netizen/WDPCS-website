@@ -66,6 +66,7 @@ const REQUIRED_ASSETS = [
   'assets/downloads/loan-statement-application.pdf',
   'assets/images/bank-sbi-logo.svg',
   'assets/images/bank-kerala-logo.svg',
+  'assets/images/bank-kerala-logo.jpg',
   'assets/images/upi-logo.svg',
   'assets/images/bank-sbi-icon.svg',
   'assets/images/bank-kerala-icon.svg',
@@ -404,7 +405,7 @@ assert(contactHtml.includes('33175259937') && contactHtml.includes('SBIN0003035'
 assert(contactHtml.includes('171412002000112') && contactHtml.includes('KSBK0001714'), 'contact.html contains Kerala Bank Kalpetta Account & IFSC');
 assert(!contactHtml.includes('qr-code') && !contactHtml.includes('qrcode') && !contactHtml.toLowerCase().includes('qr code'), 'contact.html strictly does not share QR code');
 assert(contactHtml.includes('bank-sbi-icon.svg'), 'contact.html contains official SBI logo');
-assert(contactHtml.includes('bank-kerala-icon.svg'), 'contact.html contains official Kerala Bank logo');
+assert(contactHtml.includes('bank-kerala-logo.jpg') || contactHtml.includes('bank-kerala-icon.svg'), 'contact.html contains official Kerala Bank logo');
 assert(contactHtml.includes('upi-icon.svg'), 'contact.html contains official UPI logo');
 assert(faqHtml.includes('wynddpc@sbi'), 'faq.html contains UPI ID wynddpc@sbi');
 assert(faqHtml.includes('33175259937') && faqHtml.includes('171412002000112'), 'faq.html contains Bank Account numbers in Remittance FAQ');

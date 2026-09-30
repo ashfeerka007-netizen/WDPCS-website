@@ -1,20 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" aria-label="Kerala Bank Official Emblem">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" aria-label="Kerala Bank Official Icon">
   <defs>
-    <linearGradient id="kbIconRed" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#e11d48"/>
-      <stop offset="100%" stop-color="#991b1b"/>
-    </linearGradient>
-    <linearGradient id="kbIconGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#16a34a"/>
-      <stop offset="100%" stop-color="#15803d"/>
+    <linearGradient id="kbIcon1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4b2b"/>
+      <stop offset="50%" stop-color="#ff2800"/>
+      <stop offset="100%" stop-color="#c40b17"/>
     </linearGradient>
   </defs>
-  <!-- Rounded Rect / Shield Base -->
-  <rect x="2" y="2" width="96" height="96" rx="22" fill="url(#kbIconRed)"/>
-  <!-- Decorative Ring -->
-  <circle cx="50" cy="50" r="38" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3"/>
-  <!-- Twin Sprout / Palm Motif -->
-  <path d="M 50 20 C 36 32 34 52 50 70 C 66 52 64 32 50 20 Z" fill="#ffffff"/>
-  <path d="M 50 28 C 40 37 38 52 50 64 C 62 52 60 37 50 28 Z" fill="url(#kbIconGreen)"/>
-  <circle cx="50" cy="72" r="5" fill="#facc15"/>
+
+  <!-- Deep Maroon Rounded Background -->
+  <rect width="120" height="120" rx="20" fill="#5c060e"/>
+
+  <!-- Logo Symbol '1' and dots -->
+  <g transform="translate(18, 14)">
+    <!-- '1' Top Flag & Head -->
+    <path d="M 44 2 C 44 2 28 18 16 23 C 14 24 13 26 13 29 L 13 36 C 13 39 15 41 18 41 L 34 41 L 34 68 C 34 71 36 74 40 74 L 64 74 C 67 74 70 71 70 68 L 70 8 C 70 5 67 2 64 2 Z" fill="url(#kbIcon1Grad)"/>
+    
+    <!-- Red transitional dots -->
+    <circle cx="40" cy="84" r="4.5" fill="#a8121f"/>
+    <circle cx="64" cy="84" r="4.5" fill="#a8121f"/>
+
+    <!-- White Matrix Dots of the numeral base -->
+    <!-- Row 1 -->
+    <circle cx="40" cy="94" r="4.5" fill="#ffffff"/>
+    <circle cx="52" cy="94" r="4.5" fill="#ffffff"/>
+    <circle cx="64" cy="94" r="4.5" fill="#ffffff"/>
+
+    <!-- Row 2 -->
+    <circle cx="40" cy="103" r="3.2" fill="#ffffff"/>
+    <circle cx="48" cy="103" r="3.2" fill="#ffffff"/>
+    <circle cx="56" cy="103" r="3.2" fill="#ffffff"/>
+    <circle cx="64" cy="103" r="3.2" fill="#ffffff"/>
+
+    <!-- Row 3 -->
+    <circle cx="40" cy="111" r="3.2" fill="#ffffff"/>
+    <circle cx="48" cy="111" r="3.2" fill="#ffffff"/>
+    <circle cx="56" cy="111" r="3.2" fill="#ffffff"/>
+    <circle cx="64" cy="111" r="3.2" fill="#ffffff"/>
+
+    <!-- Baseline Underscore Bar -->
+    <rect x="36" y="118" width="32" height="2" rx="1" fill="#ffffff"/>
+  </g>
 </svg>

@@ -1,28 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" aria-label="Kerala Bank Official Logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 310" width="520" height="310" aria-label="Kerala Bank Official Logo">
   <defs>
-    <linearGradient id="kbRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#e11d48"/>
-      <stop offset="100%" stop-color="#b91c1c"/>
-    </linearGradient>
-    <linearGradient id="kbGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#16a34a"/>
-      <stop offset="100%" stop-color="#15803d"/>
+    <linearGradient id="kb1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4b2b"/>
+      <stop offset="50%" stop-color="#ff2800"/>
+      <stop offset="100%" stop-color="#c40b17"/>
     </linearGradient>
   </defs>
-  <!-- Kerala Bank Official Emblem -->
-  <g transform="translate(10, 8)">
-    <!-- Red Circular Shield -->
-    <rect x="0" y="0" width="64" height="64" rx="14" fill="url(#kbRedGrad)"/>
-    <!-- Inner White Ring -->
-    <circle cx="32" cy="32" r="24" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
-    <!-- Stylized Palm / Sprout Leaves -->
-    <path d="M 32 15 C 24 22 22 34 32 45 C 42 34 40 22 32 15 Z" fill="#ffffff"/>
-    <path d="M 32 20 C 26 26 25 34 32 42 C 39 34 38 26 32 20 Z" fill="url(#kbGreenGrad)"/>
-    <circle cx="32" cy="46" r="3.5" fill="#facc15"/>
-  </g>
-  <!-- Kerala Bank Typography -->
-  <g transform="translate(88, 18)">
-    <text x="0" y="27" font-family="'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="25" font-weight="900" fill="#b91c1c" letter-spacing="-0.5">KERALA BANK</text>
-    <text x="0" y="44" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#047857" letter-spacing="0.3">KERALA STATE CO-OP BANK</text>
+
+  <!-- Deep Maroon Background -->
+  <rect width="520" height="310" rx="16" fill="#5c060e"/>
+
+  <!-- Logo Group -->
+  <g transform="translate(110, 55)">
+    <!-- Symbol '1' Top Flag & Head -->
+    <path d="M 58 7 C 58 7 38 27 24 33 C 21 34.5 20 37.5 20 41 L 20 50 C 20 54 23 57 27 57 L 46 57 L 46 95 C 46 100 49 104 54 104 L 84 104 C 88 104 92 100 92 95 L 92 15 C 92 10 88 7 84 7 Z" fill="url(#kb1Grad)"/>
+    
+    <!-- Red transitional dots in the numeral stem -->
+    <circle cx="54" cy="118" r="6" fill="#b91c1c"/>
+    <circle cx="86" cy="118" r="6" fill="#b91c1c"/>
+    <circle cx="86" cy="136" r="6" fill="#b91c1c"/>
+
+    <!-- White Matrix Dots of the numeral base -->
+    <!-- Row 1 -->
+    <circle cx="54" cy="154" r="6.5" fill="#ffffff"/>
+    <circle cx="70" cy="154" r="6.5" fill="#ffffff"/>
+    <circle cx="86" cy="154" r="6.5" fill="#ffffff"/>
+
+    <!-- Row 2 -->
+    <circle cx="54" cy="170" r="5" fill="#ffffff"/>
+    <circle cx="64.5" cy="170" r="5" fill="#ffffff"/>
+    <circle cx="75.5" cy="170" r="5" fill="#ffffff"/>
+    <circle cx="86" cy="170" r="5" fill="#ffffff"/>
+
+    <!-- Row 3 -->
+    <circle cx="54" cy="184" r="5" fill="#ffffff"/>
+    <circle cx="64.5" cy="184" r="5" fill="#ffffff"/>
+    <circle cx="75.5" cy="184" r="5" fill="#ffffff"/>
+    <circle cx="86" cy="184" r="5" fill="#ffffff"/>
+
+    <!-- Baseline Underscore Bar -->
+    <rect x="50" y="196" width="41" height="3" rx="1.5" fill="#ffffff"/>
+
+    <!-- Text: KERALA BANK -->
+    <text x="110" y="78" font-family="'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" fill="#ffffff" letter-spacing="1">KERALA</text>
+    <text x="110" y="120" font-family="'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" fill="#ffffff" letter-spacing="1">BANK</text>
+    
+    <!-- Subtitle: Kerala State Co-operative Bank -->
+    <text x="50" y="152" transform="translate(0, 78)" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16.5" font-weight="600" fill="#ffffff" letter-spacing="0.2">Kerala State Co-operative Bank</text>
   </g>
 </svg>
